@@ -8,6 +8,10 @@
 
         <!-- 编程式路由 -->
         <div @click="gotoGoods">跳转到商品界面</div>
+
+        <router-link v-bind:to="{name:'goods'}">用命名路由的方式跳转到商品详细页面</router-link>
+        <!-- 这里的name与index.js中路由参数相关 -->
+        <!-- 如果要顺带传参{name:'goods',params:{goodsId:123}} -->
     </div>
 </template>
 
@@ -21,7 +25,8 @@ export default {
     methods: {
         gotoGoods(){
             // this.$router.push('/goods');
-
+                // router.push({name:'goods',params:{goodsId:123}})
+            
             // this.$router.push({
             //     path:'/goods?goodsId=666'
             // });
